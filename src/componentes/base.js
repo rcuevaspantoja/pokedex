@@ -1,23 +1,24 @@
 import React from 'react'
 import Buscador from './buscador'
-import Foto from './foto'
+import FuncionBuscar from './FuncionBuscar';
 
-function base() {
+function Base() {
+
   return (
     <div className='base'>
 
       <div className='contenedor-buscadoryPantalla-1'>
-        <Buscador/>
-        <div className='pantalla-1'>
-          <Foto/>
-        </div>
-    </div>
 
-      <div className='pantalla-2'>
-        
+        <Buscador />
+
+        <div className='pantalla-1'>
+          <FuncionBuscar nombre = {"ditto"} />
+        </div>
       </div>
+      
+      <div className='pantalla-2'></div>
     </div>
   )
 }
 
-export default base
+export default Base
