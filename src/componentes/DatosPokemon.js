@@ -25,12 +25,10 @@ function DatosPokemon({nombre}) {
     })
 
   return (
-    <div>
-
-      <p>#{numeroPokemon}</p>
-      <p>{nombrePokemon}</p>
-      <p>Pokémon tipo {tipoPokemon}</p>
-
+    <div className='DatosPokemon'>
+      <Typography>#{numeroPokemon}</Typography>
+      <Typography>{nombrePokemon}</Typography>
+      <Typography>Pokémon Tipo {tipoPokemon}</Typography>
     </div>
   )
 }

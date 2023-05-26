@@ -20,8 +20,8 @@ function FuncionBuscar({nombre}) {
 
 
   return (
-    <div className='imagenPKM'>
-        <img src={imageUrl}  height="400" alt="Imagen del Pokémon seleccionado."/>   
+    <div className='pantalla-1'>
+        <img src={imageUrl}  height="200" alt="Imagen del Pokémon seleccionado."/>   
     </div>
   )
 }

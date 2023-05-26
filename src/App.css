@@ -8,29 +8,24 @@ Body {
   height:100vh; 
   justify-content: center;
   align-items: center;
+  background-color: antiquewhite;
 }
 
 .base{
   display: flex;
-  height: 600px;
-  width: 1200px;
+  height: 400px;
+  width: 500px;
   justify-content: space-between;
+  flex-direction: column;
   border-radius: 7px;
   background-color: red;
   border: 3px solid #6d1010;
   box-shadow: 10px 10px 5px rgb(163, 163, 163);
 }
 
-.contenedor-buscadoryPantalla-1{
-  display:flex;
-  flex-direction: column;
-}
-
 .buscador{
-  margin-left: 25px;
-  margin-top: 20px;
-  width:350px;
-  padding-left: 60px;
+  margin-top: 25px;
+  align-self: center;
 }
 
 .pantalla-1{
@@ -39,11 +34,10 @@ Body {
   width: 350px;
   border-radius: 7px;
   justify-content: center;
+  align-self: center;
   background-color: white;
   border: 2px solid #000000;
   box-shadow: 3px 3px 2px rgb(102, 102, 102) inset;
-  margin-left: 25px;
-  margin-top: 20px;
 }
 
 .imagenPKM{
@@ -52,15 +46,9 @@ Body {
   align-items: center;
 }
 
-
-.pantalla-2{
+.DatosPokemon{
   display:flex;
-  height: 550px;
-  width: 650px;
-  border-radius: 7px;
-  margin-right: 25px;
-  margin-top: 20px;
-  background-color: white;
-  border: 2px solid #000000;
-  box-shadow: 3px 3px 2px rgb(102, 102, 102) inset;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
 }

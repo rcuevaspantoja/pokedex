@@ -9,24 +9,12 @@ function Base() {
 
   return (
     <div className='base'>
-
-      <div className='contenedor-buscadoryPantalla-1'>
-
         <Buscador />
 
-        <div className='pantalla-1'>
-          <FuncionBuscar nombre = {nombrePokemon} />
-        </div>
+        <FuncionBuscar nombre = {nombrePokemon} />
 
-        <div className='pantalla-1-inferior'>
-          <DatosPokemon nombre = {nombrePokemon} />
-        </div>
-
-      </div>
-      
-      <div className='pantalla-2'></div>
+        <DatosPokemon nombre = {nombrePokemon} />
     </div>
   )
 }
-
 export default Base
