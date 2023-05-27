@@ -25,5 +25,4 @@ function buscador() {
     </div>
   )
 }
-
 export default buscador

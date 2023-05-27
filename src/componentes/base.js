@@ -5,15 +5,15 @@ import DatosPokemon from './DatosPokemon';
 
 function Base() {
 
-  const nombrePokemon = "pikachu"
+  const nombrePokemon = "mudkip"
 
   return (
     <div className='base'>
         <Buscador />
 
         <FuncionBuscar nombre = {nombrePokemon} />
-
         <DatosPokemon nombre = {nombrePokemon} />
+
     </div>
   )
 }

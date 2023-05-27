@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { createTheme } from '@mui/material/styles';
 import { Typography } from '@mui/material';
 
-
 function DatosPokemon({nombre}) {
+
+    const theme = createTheme({
+      typography: {
+        h6: {
+          color: 'white'
+        }
+      }
+    });
 
     const[nombrePokemon, setNombreUrl] = useState(null);
     const[tipoPokemon, setTipoUrl] = useState(null);
@@ -26,9 +34,9 @@ function DatosPokemon({nombre}) {
 
   return (
     <div className='DatosPokemon'>
-      <Typography>#{numeroPokemon}</Typography>
-      <Typography>{nombrePokemon}</Typography>
-      <Typography>Pokémon Tipo {tipoPokemon}</Typography>
+      <Typography variant='h6' theme={theme}>#{numeroPokemon}</Typography>
+      <Typography variant='h6' theme={theme}>{nombrePokemon}</Typography>
+      <Typography variant='h6' theme={theme}>{tipoPokemon} type</Typography>
     </div>
   )
 }
