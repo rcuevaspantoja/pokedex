@@ -1,10 +1,17 @@
-import {React} from 'react'
+import {React, useState} from 'react'
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
 
-function buscador(nombrePokemon, setNombrePokemon) { 
+const Buscador = ({nombrePokemon, cambioNombre}) => { 
+
+    const [entrada, setEntrada] = useState('')
+
+    const handleClick = () =>{
+        cambioNombre(entrada)
+    }
+
     return (
     <div className='buscador'>
         
@@ -21,11 +28,14 @@ function buscador(nombrePokemon, setNombrePokemon) {
             ),
         }}
         variant="standard"
-        defaultValue={nombrePokemon.nombrePokemon}
+        defaultValue={nombrePokemon}
+        onChange={ (e)=>{setEntrada(e.target.value)} }
+
         /> 
 
-        <Button variant="contained"> Buscar </Button>
+        <Button variant="contained" onClick={handleClick}> Buscar </Button>
     </div>
   )
 }
-export default buscador
+
+export default Buscador

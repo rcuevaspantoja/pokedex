@@ -16,7 +16,7 @@ function FuncionBuscar({nombre}) {
         } )
         .catch(() => console.log("Problemas al comunicarse con el servidor para obtener Pkm_img."))
 
-    }, []);
+    });
 
 
   return (

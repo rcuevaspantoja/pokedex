@@ -23,9 +23,6 @@ function DatosPokemon({nombre}) {
         fetch ( Url )
         .then(response => response.json())
         .then( data => {
-/*             console.log(data.id)
-            console.log(data.name)
-            console.log(data.types[0].type.name) */
             setNombreUrl(data.name);
             setTipoUrl(data.types[0].type.name);
             setNumeroUrl(data.id);
@@ -40,5 +37,4 @@ function DatosPokemon({nombre}) {
     </div>
   )
 }
-
 export default DatosPokemon
