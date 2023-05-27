@@ -1,15 +1,15 @@
-import React from 'react'
+import {React, useState} from 'react'
 import Buscador from './buscador'
 import FuncionBuscar from './FuncionBuscar';
 import DatosPokemon from './DatosPokemon';
 
 function Base() {
 
-  const nombrePokemon = "mudkip"
+  const [nombrePokemon, setNombrePokemon] = useState('mudkip')
 
   return (
     <div className='base'>
-        <Buscador />
+        <Buscador nombrePokemon = {nombrePokemon} />
 
         <FuncionBuscar nombre = {nombrePokemon} />
         <DatosPokemon nombre = {nombrePokemon} />

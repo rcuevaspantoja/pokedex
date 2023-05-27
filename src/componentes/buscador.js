@@ -1,10 +1,10 @@
-import React from 'react'
+import {React} from 'react'
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { Icon } from '@iconify/react';
+import Button from '@mui/material/Button';
 
-function buscador() {
-
+function buscador(nombrePokemon, setNombrePokemon) { 
     return (
     <div className='buscador'>
         
@@ -21,7 +21,10 @@ function buscador() {
             ),
         }}
         variant="standard"
-        />
+        defaultValue={nombrePokemon.nombrePokemon}
+        /> 
+
+        <Button variant="contained"> Buscar </Button>
     </div>
   )
 }

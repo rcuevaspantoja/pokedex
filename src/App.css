@@ -24,8 +24,12 @@ Body {
 }
 
 .buscador{
+  display:flex;
   margin-top: 25px;
   align-self: center;
+  width: 350px;
+  justify-content: space-between;
+  
 }
 
 .pantalla-1{
