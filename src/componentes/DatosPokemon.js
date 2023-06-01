@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { createTheme } from '@mui/material/styles';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { spacing } from '@mui/system';
 
 function DatosPokemon({nombre}) {
 
     const theme = createTheme({
       typography: {
-        h6: {
-          color: 'white'
+      h6: {
+          color: 'black',
+          lineHeight: 1.2
         }
       }
     });
@@ -26,15 +28,15 @@ function DatosPokemon({nombre}) {
             setNombreUrl(data.name);
             setTipoUrl(data.types[0].type.name);
             setNumeroUrl(data.id);
+          })
         })
-    })
 
   return (
-    <div className='DatosPokemon'>
-      <Typography variant='h6' theme={theme}>#{numeroPokemon}</Typography>
-      <Typography variant='h6' theme={theme}>{nombrePokemon}</Typography>
+    <Box className='DatosPokemon' sx={{ m:0 }}>
+    <Typography variant='h6' theme={theme}>#{numeroPokemon}</Typography>
+      <Typography variant='h6' theme={theme} sx={{ textTransform: 'uppercase' }}>{nombrePokemon}</Typography>
       <Typography variant='h6' theme={theme}>{tipoPokemon} type</Typography>
-    </div>
+    </Box>
   )
 }
 export default DatosPokemon

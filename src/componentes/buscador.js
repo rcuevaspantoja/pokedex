@@ -17,9 +17,7 @@ const Buscador = ({nombrePokemon, cambioNombre}) => {
         
         <TextField
         id="input-with-icon-textfield"
-        sx={{fontSize: 40,
-            input: { color: 'white' },
-        }}
+        sx={{input: { color: 'white', textTransform: 'uppercase' }}}
         InputProps={{
             startAdornment: (
             <InputAdornment position="start">
