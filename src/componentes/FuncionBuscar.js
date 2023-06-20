@@ -1,37 +1,29 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import { Modal, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
+import VentanaModal from './Ventanamodal.js'
 
 function FuncionBuscar({nombre}) {
 
     const [imageUrl, setImageUrl] = useState(null);
-
-    //manipulación del modal
-    const [abrirModal, setAbrirModal] = useState(false);
+    const [abrirModal, setAbrirModal] = useState(true);
     const funcionAbrirModal = () => setAbrirModal(true);
     const funcionCerrarModal = () => setAbrirModal(false);
 
     const Url = 'https://pokeapi.co/api/v2/pokemon/' + nombre
 
-    /*Cada vez que algo se actualice en el DOM se ejecutará esta función. */
-    useEffect(() => {
+    useEffect(() => {/*Cada vez que algo se actualice en el DOM se ejecutará esta función. */
 
         fetch( Url )
         .then((response) =>{ 
 
-          if( !response.ok ){
+                              if( !response.ok ){
+                                
+                                setImageUrl("https://static.wikia.nocookie.net/bec6f033-936d-48c5-9c1e-7fb7207e28af"); //MissingNo  icon
+                                {funcionAbrirModal()}
+                                <VentanaModal/>//ejecuta la porción de código de modal      
+                              }
 
-            {funcionAbrirModal()}
-            <Modal
-              open={abrirModal}
-              onClose={funcionCerrarModal}
-            >
-              <Box>
-                <Typography> modal </Typography>
-              </Box>
-            </Modal>
-
-          }
           return response.json();
         }).then( data => {
           setImageUrl(data.sprites.front_default)
@@ -42,7 +34,7 @@ function FuncionBuscar({nombre}) {
 
   return (
     <div className='pantalla-1'>
-        <img src={imageUrl}  height="200" alt="Imagen del Pokémon seleccionado."/>   
+        <img src={imageUrl} height="200" alt="Imagen del Pokémon seleccionado."/>   
     </div>
   )
 }

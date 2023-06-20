@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createTheme } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
-import { spacing } from '@mui/system';
 
 function DatosPokemon({nombre}) {
 

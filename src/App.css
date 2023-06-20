@@ -45,6 +45,27 @@ Body {
   box-shadow: 3px 3px 2px rgb(102, 102, 102) inset;
 }
 
+.modalBackground{
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  position: fixed;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContenedor{
+  width: 500px;
+  height: 500px;
+  background-color: red;
+  border-radius: 7px;
+  border: 2px solid #000000;
+  box-shadow: 3px 3px 2px rgb(102, 102, 102);
+  justify-content: center;
+  align-items: center;
+}
+
 .imagenPKM{
   display:flex;
   flex-direction: column;
