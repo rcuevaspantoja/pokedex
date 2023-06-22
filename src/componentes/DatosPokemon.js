@@ -20,14 +20,25 @@ function DatosPokemon({nombre}) {
     const Url = 'https://pokeapi.co/api/v2/pokemon/' + nombre
 
     useEffect(() => {
+          
+        fetch( Url )
+        .then((response) =>{
 
-        fetch ( Url )
-        .then(response => response.json())
-        .then( data => {
+          if( !response.ok ){
+            setNombreUrl("???");
+            setTipoUrl("???");
+            setNumeroUrl("???");
+          }
+          
+          return response.json();
+        }).then( data => {
             setNombreUrl(data.name);
             setTipoUrl(data.types[0].type.name);
             setNumeroUrl(data.id);
-          })
+        })
+        .catch(() => console.log("Error al buscar nombre del Pokémon"))
+
+
         })
 
   return (
