@@ -1,6 +1,9 @@
 # Pokedex
 Proyecto que consume una API para poder desplegar información de personajes de el juego y serie Pokémon mediante React.
 
+# Live App
+[pokedex-three-indol.vercel.app]
+
 # Utilización
 Ingresar el nombre del pokémon y este se conectará con la API de Pokémon y devolverá su número de ID, junto con el tipo y su sprites.
 
