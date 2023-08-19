@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { Button } from '@mui/material';
 import React, { useEffect, useState } from 'react'
+import missingNo from '../img/missingno.png'
 
 function FuncionBuscar({nombre}) {
     //CONSTANTES
@@ -14,8 +14,7 @@ function FuncionBuscar({nombre}) {
         .then((response) =>{ 
 
           if( !response.ok ){  //entra cuando no sea exitosa la consulta
-            console.log("Ejecución de la función")
-            setImageUrl("https://static.wikia.nocookie.net/bec6f033-936d-48c5-9c1e-7fb7207e28af"); //MissingNo icon
+            setImageUrl(missingNo); //MissingNo icon
           }
 
           return response.json();

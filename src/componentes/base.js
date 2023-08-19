@@ -13,7 +13,7 @@ function Base() {
 
   return (
     <div className='base'>
-        <Buscador nombrePokemon = {nombrePokemon} cambioNombre= {cambioNombre} />
+        <Buscador nombrePokemon = {nombrePokemon} cambioNombre= {cambioNombre} />   
         <FuncionBuscar nombre = {nombrePokemon} />
         <DatosPokemon nombre = {nombrePokemon} />
     </div>

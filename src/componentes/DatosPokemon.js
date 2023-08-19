@@ -1,23 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { createTheme } from '@mui/material/styles';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 
 function DatosPokemon({nombre}) {
-
-    const theme = createTheme({
-      typography: {
-      h6: {
-          color: 'black',
-          lineHeight: 1.2
-        }
-      }
-    });
 
     const[nombrePokemon, setNombreUrl] = useState(null);
     const[tipoPokemon, setTipoUrl] = useState(null);
     const[numeroPokemon, setNumeroUrl] = useState(null);
 
     const Url = 'https://pokeapi.co/api/v2/pokemon/' + nombre
+    const urlLocation = "https://pokeapi.co/api/v2/location/" + "25"
 
     useEffect(() => {
           
@@ -37,15 +28,24 @@ function DatosPokemon({nombre}) {
             setNumeroUrl(data.id);
         })
         .catch(() => console.log("Error al buscar nombre del Pokémon"))
-
+        
+        fetch(urlLocation)
+        .then((responseLocation) =>{
+          //console.log(responseLocation.region)
+          console.log("URL: "+ urlLocation)
+          console.log(responseLocation)
+        
+        })
 
         })
 
   return (
     <Box className='DatosPokemon' sx={{ m:0 }}>
-    <Typography variant='h6' theme={theme}>#{numeroPokemon}</Typography>
-      <Typography variant='h6' theme={theme} sx={{ textTransform: 'uppercase' }}>{nombrePokemon}</Typography>
-      <Typography variant='h6' theme={theme}>{tipoPokemon} type</Typography>
+      <h1>#{numeroPokemon}</h1>
+      <h1>{nombrePokemon}</h1>
+      <h1>{tipoPokemon} type</h1>
+      <h1 className='location'>LOCATION</h1>
+      <h1>Route 104</h1>
     </Box>
   )
 }
