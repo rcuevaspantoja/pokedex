@@ -1,10 +1,10 @@
-import {React, useState} from 'react'
+import {React, useState} from 'react' 
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import { Icon } from '@iconify/react';
 import Button from '@mui/material/Button';
 
-const Buscador = ({nombrePokemon, cambioNombre}) => { 
+const Buscador = ({nombrePokemon, cambioNombre}) => {
 
     const [entrada, setEntrada] = useState('')
 

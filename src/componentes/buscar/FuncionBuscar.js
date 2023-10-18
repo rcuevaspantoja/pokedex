@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import missingNo from '../img/missingno.png'
+import missingNo from '../../img/missingno.png'
 
 function FuncionBuscar({nombre}) {
     //CONSTANTES

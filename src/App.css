@@ -10,19 +10,13 @@ Body {
   align-items: center;
   background-color: antiquewhite;
 }
-
+ 
 .base{
   display: flex;
   height: 600px;
   width: 600px;
   justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  border-radius: 7px;
-  background-color: red;
-  border: 3px solid #6d1010;
-  box-shadow: 10px 10px 5px rgb(163, 163, 163);
-}
+  align-items: center; flex-direction: column; border-radius: 7px; background-color: red; border: 3px solid #6d1010; box-shadow: 10px 10px 5px rgb(163, 163, 163); }
 
 .buscador{
   display:flex;

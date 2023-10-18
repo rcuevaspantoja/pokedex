@@ -18,6 +18,8 @@ function DatosPokemon({ nombre }) {
           setNombreUrl("???");
           setTipoUrl("???");
           setNumeroUrl("???");
+          setHabilidades("???");
+          setPeso("???");
         }
 
         return response.json();

@@ -1,5 +1,5 @@
 import {React, useState} from 'react'
-import Buscador from './buscador'
+ import Buscador from './buscador'
 import FuncionBuscar from './FuncionBuscar';
 import DatosPokemon from './DatosPokemon';
 
