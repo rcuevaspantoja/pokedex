@@ -1,12 +1,11 @@
 import React from 'react'
-import { Link, Router, Route, Routes, NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 function navbar() {
 
   return (
-    <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <Link class="navbar-brand text-danger" as={Link} to={"/"} >Pokedex
+          <Link class="navbar-brand text-light" as={Link} to={"/"} >Pokedex
           </Link>
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -17,7 +16,6 @@ function navbar() {
               </div>
           </div>
       </nav>    
-    </div>
   )
 }
 

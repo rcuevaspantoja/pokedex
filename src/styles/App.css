@@ -8,7 +8,6 @@ nav a{
     font-weight: bold;
 }
 
-
 /*BUSCAR*******************************************************************/
 .base{
     display: flex;
@@ -80,3 +79,26 @@ nav a{
   .habilidades {
     text-decoration: underline;
   }
+
+ /*LISTADO***************************************************/ 
+
+ .infinite-scroll-container{
+    margin: auto;
+    width: 90%;
+    height: 50em;
+    overflow: auto;
+ }
+
+
+
+
+
+
+
+ /*CARD***************************************************/ 
+
+ .card{
+    border: black solid 1px;
+    margin: 15px;
+    width: 250px;
+ }
