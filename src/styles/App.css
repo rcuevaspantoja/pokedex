@@ -100,19 +100,26 @@ nav a{
   overflow: hidden;
 }
 
-/* .card:hover{
-  background-color: rgb(49, 92, 147);
-  filter: blur(3px);
-  transition: 0.5s filter linear;
+.clickme{
+  display: none;
+}
 
-} */
-
-.card img:hover{
+.card:hover img{
   transform: scale(1.2);
   transition: 0.5s transform;
 }
 
 .card:hover{
   background-color: rgb(104, 140, 175);
-  transition: 1s
+  transition: 1s;
+}
+
+.card:hover .card-title{
+  display: none;
+  transition: 1s;
+}
+
+.card:hover .clickme{
+  display: block;
+  color: white;
 }

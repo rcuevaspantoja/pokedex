@@ -1,4 +1,3 @@
-import { ListItem } from '@mui/material'
 import React, {useState, useEffect } from 'react'
 import 'react-infinite-scroll-component'
 import InfiniteScroll from 'react-infinite-scroll-component'
@@ -26,7 +25,8 @@ const ObtenerLista = (id, url) => {
 
 useEffect(() => {
     ObtenerLista(1, null);
-}, [])
+// eslint-disable-next-line
+},[])
 
 return (
     <div className='infinite-scroll-container' id='infiniteScroll'>
@@ -51,12 +51,12 @@ return (
                         {pokemon.map((e) =>{
                                 contadorDeIdpokemon +=  1
                                 let imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+contadorDeIdpokemon+".png"
-                                console.log(imgURL)
                                 return(
                                     <div class="card text-center">
-                                        <img class="sprite-pokemon" src={imgURL} alt="Card image cap"/>
+                                        <img class="sprite-pokemon" src={imgURL} alt="pokemon sprite"/>
                                         <div class="card-body">
                                             <h5 class="card-title">#{contadorDeIdpokemon} {e.name}</h5>
+                                            <h5 class="clickme">Click for more info</h5>
                                         </div>
                                     </div>
                                 )
