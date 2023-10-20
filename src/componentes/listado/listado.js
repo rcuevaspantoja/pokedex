@@ -53,12 +53,12 @@ return (
                                 let imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+contadorDeIdpokemon+".png"
                                 console.log(imgURL)
                                 return(
-                                <div class="card text-center">
-                                    <img class="sprite-pokemon" src={imgURL} alt="Card image cap"/>
-                                    <div class="card-body">
-                                        <h5 class="card-title">#{contadorDeIdpokemon} {e.name}</h5>
+                                    <div class="card text-center">
+                                        <img class="sprite-pokemon" src={imgURL} alt="Card image cap"/>
+                                        <div class="card-body">
+                                            <h5 class="card-title">#{contadorDeIdpokemon} {e.name}</h5>
+                                        </div>
                                     </div>
-                                </div>
                                 )
                             })}                       
                     </div>
