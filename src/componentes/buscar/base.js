@@ -1,6 +1,5 @@
 import {React, useState} from 'react'
  import Buscador from './buscador'
-import FuncionBuscar from './FuncionBuscar';
 import DatosPokemon from './DatosPokemon';
 
 function Base() {
@@ -14,7 +13,6 @@ function Base() {
   return (
     <div className='base'>
         <Buscador nombrePokemon = {nombrePokemon} cambioNombre= {cambioNombre} />   
-        <FuncionBuscar nombre = {nombrePokemon} />
         <DatosPokemon nombre = {nombrePokemon} />
     </div>
   )

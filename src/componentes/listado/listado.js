@@ -28,6 +28,10 @@ useEffect(() => {
 // eslint-disable-next-line
 },[])
 
+const ClickFuncion= (nombre) =>{
+    navigator.clipboard.writeText(nombre)
+}
+
 return (
     <div className='infinite-scroll-container' id='infiniteScroll'>
         {infoid !== null ? (
@@ -52,11 +56,10 @@ return (
                                 contadorDeIdpokemon +=  1
                                 let imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+contadorDeIdpokemon+".png"
                                 return(
-                                    <div class="card text-center">
+                                    <div class="card text-center" onClick={ClickFuncion(e.name)}>
                                         <img class="sprite-pokemon" src={imgURL} alt="pokemon sprite"/>
                                         <div class="card-body">
                                             <h5 class="card-title">#{contadorDeIdpokemon} {e.name}</h5>
-                                            <h5 class="clickme">Click for more info</h5>
                                         </div>
                                     </div>
                                 )

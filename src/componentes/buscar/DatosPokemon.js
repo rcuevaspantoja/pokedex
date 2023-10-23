@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Box } from "@mui/material";
+import missingNo from '../../img/missingno.png'
 
 function DatosPokemon({ nombre }) {
   const [nombrePokemon, setNombreUrl] = useState(null);
   const [tipoPokemon, setTipoUrl] = useState(null);
   const [numeroPokemon, setNumeroUrl] = useState(null);
-  const [habilidades, setHabilidades] = useState(null);
+  const [habilidad, setHabilidad] = useState(null);
   const [peso, setPeso] = useState(null);
+  const [imageUrl, setImageUrl] = useState(null);
 
   const Url = "https://pokeapi.co/api/v2/pokemon/" + nombre;
 
@@ -18,8 +20,9 @@ function DatosPokemon({ nombre }) {
           setNombreUrl("???");
           setTipoUrl("???");
           setNumeroUrl("???");
-          setHabilidades("???");
+          setHabilidad("???");
           setPeso("???");
+          setImageUrl(missingNo); //MissingNo icon          
         }
 
         return response.json();
@@ -28,21 +31,29 @@ function DatosPokemon({ nombre }) {
         setNombreUrl(data.name); //NOMBRE
         setTipoUrl(data.types[0].type.name); // TIPO
         setNumeroUrl(data.id); //ID
-        setHabilidades(data.abilities[0].ability.name) //HABILIDADES
+        setHabilidad(data.abilities[0].ability.name) //HABILIDADES
         setPeso(data.weight) //Peso
+        setImageUrl("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+data.id+".png")
       })
       .catch(() => console.log());
   });
 
   return (
-    <Box className="DatosPokemon" sx={{ m: 0 }}>
-      <h1>#{numeroPokemon}</h1>
-      <h1>{nombrePokemon}</h1>
-      <h1>{tipoPokemon} type</h1>
-      <h1>{peso} LB</h1>
-      <h1 className="habilidades">Main Ability</h1>
-      <h1>{habilidades}</h1>
-    </Box>
+    <div>
+      <Box className="BoxImagenPokemon">
+        <img class="sprite-pokemon" src={imageUrl} alt="pokemon sprite"/>
+      </Box>
+      
+      <Box className="BoxDatosPokemon">    
+        <p>
+          #{numeroPokemon} <br/>
+          {nombrePokemon} <br />
+          {tipoPokemon} type<br/>
+          weight: {peso} Lb <br/>
+          Ability: {habilidad} <br/>
+        </p>
+      </Box>
+    </div>
   );
 }
 export default DatosPokemon;

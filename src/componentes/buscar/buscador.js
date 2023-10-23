@@ -16,22 +16,32 @@ const Buscador = ({nombrePokemon, cambioNombre}) => {
     <div className='buscador'>
         
         <TextField
-        id="input-with-icon-textfield"
-        sx={{input: { color: 'white', textTransform: 'uppercase' }}}
+        fullWidth
+        id="outlined-basic"
+        sx={{input: { color: 'white', textTransform: 'uppercase', fontSize: '30px', fontFamily: 'Press Start 2P' }}}
         InputProps={{
             startAdornment: (
             <InputAdornment position="start">
-                <Icon icon="mdi:pokeball" style={{ fontSize: '25px', color: 'white' }}/>
+                <Icon icon="mdi:pokeball" style={{ fontSize: '40px', color: 'white' }}/>
             </InputAdornment>
             ),
         }}
         variant="standard"
-        defaultValue={nombrePokemon}
         onChange={ (e)=>{setEntrada(e.target.value)} }
 
         /> 
 
-        <Button variant="contained" onClick={handleClick}> Buscar </Button>
+        <Button 
+        variant="contained" 
+        onClick={handleClick}
+        style={{
+            borderRadius: 15,
+            backgroundColor: "black",
+            fontSize: "20px",
+        }}
+        > 
+            Buscar 
+        </Button>
     </div>
   )
 }
