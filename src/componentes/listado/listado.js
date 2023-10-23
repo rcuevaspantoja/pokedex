@@ -51,7 +51,7 @@ return (
             >
 
                 <div class="container-fluid">
-                    <div class="row">
+                    <div class="row d-flex justify-content-center">
                         {pokemon.map((e) =>{
                                 contadorDeIdpokemon +=  1
                                 let imgURL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/"+contadorDeIdpokemon+".png"

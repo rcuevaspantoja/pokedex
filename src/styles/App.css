@@ -2,7 +2,8 @@
 .App{
   background-image: url('../img/cloud-sky-atmosphere-plant-green-world-1994241-wallhere.com.jpg');
   height: 100vh;
-  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*NAVBAR******************************************************************/
 nav a{
@@ -63,13 +64,19 @@ nav a{
   font-size: 15px;
 }
 
+#botonbuscar{
+  border-radius: 15px;
+  background-color: black;
+  font-size: 20px;
+}
+
 /*LISTADO***************************************************/ 
 
 .infinite-scroll-container{
+  width: 76%;
+  height: 80vh;
   margin: auto;
   margin-top: 20px;
-  width: 1500px;
-  height: 810px;
   overflow: auto;
   border: burlywood solid 6px;
   background-color: burlywood;
@@ -82,6 +89,7 @@ nav a{
 
 .card{
   border: black solid 1px;
+  margin: auto;
   margin: 15px;
   width: 250px;
   overflow: hidden;
@@ -104,4 +112,69 @@ nav a{
 .card:hover .card-title{
   color: white;
   transition: 0.5s;
+}
+
+
+/*MEDIA***********************************************************/
+
+@media only screen and (max-width: 500px) {
+
+  .base{
+    display: flex;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    height: 80%;
+    width: 100%;
+    align-items: center; flex-direction: column; border-radius: 7px; background-color: red; border: 3px solid black; }
+  
+  .buscador{
+    display:flex;
+    margin: 25px 10px 25px 10px;
+    align-self: center;
+    width: 90%;
+  }
+  
+  .BoxImagenPokemon{
+    margin: 5px;
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 2px rgb(102, 102, 102) inset;
+    overflow: hidden;
+  }
+  
+  .BoxImagenPokemon img{
+    width: 350px;
+    height: auto;
+  }
+  
+  .BoxDatosPokemon{
+    margin: 5px;
+    height: 150px;
+    width: 350px;
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid #000000;
+    box-shadow: 3px 3px 2px rgb(102, 102, 102) inset;
+  }
+  
+  .BoxDatosPokemon p{
+    margin: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+  }
+  
+  #searchbar{
+    font-size: 20px;
+  }
+
+  #botonbuscar{
+    border-radius: 10px;
+    background-color: black;
+    font-size: 15px;
+  }
+
 }

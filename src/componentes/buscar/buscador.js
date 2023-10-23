@@ -17,7 +17,7 @@ const Buscador = ({nombrePokemon, cambioNombre}) => {
         
         <TextField
         fullWidth
-        id="outlined-basic"
+        id='searchbar'
         sx={{input: { color: 'white', textTransform: 'uppercase', fontSize: '30px', fontFamily: 'Press Start 2P' }}}
         InputProps={{
             startAdornment: (
@@ -32,13 +32,9 @@ const Buscador = ({nombrePokemon, cambioNombre}) => {
         /> 
 
         <Button 
+        id='botonbuscar'
         variant="contained" 
         onClick={handleClick}
-        style={{
-            borderRadius: 15,
-            backgroundColor: "black",
-            fontSize: "20px",
-        }}
         > 
             Buscar 
         </Button>
