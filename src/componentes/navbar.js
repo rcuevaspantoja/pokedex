@@ -5,7 +5,7 @@ function navbar() {
 
   return (
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <Link class="navbar-brand text-light" as={Link} to={"/"} >Pokedex
+          <Link class="navbar-brand text-light" >Pokedex
           </Link>
 
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
